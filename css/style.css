@@ -446,3 +446,11 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+/*** others ***/
+
+.zaigi {
+    text-align: justify;
+    font-size: 17px;
+    font-family: sans-serif;
+}
