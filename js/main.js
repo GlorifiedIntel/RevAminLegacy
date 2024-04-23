@@ -81,3 +81,28 @@
     
 })(jQuery);
 
+// Tab
+
+function openHistory(evt, historyName) {
+    // Declare all variables
+    var i, tabamincontent, tabaminlinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabamincontent = document.getElementsByClassName("tabamincontent");
+    for (i = 0; i < tabamincontent.length; i++) {
+      tabamincontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tabaminlinks = document.getElementsByClassName("tabaminlinks");
+    for (i = 0; i < tabaminlinks.length; i++) {
+      tabaminlinks[i].className = tabaminlinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(historyName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
